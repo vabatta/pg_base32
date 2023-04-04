@@ -1,0 +1,6 @@
+comment = 'pg_base32:  Created by pgx'
+default_version = '@CARGO_VERSION@'
+module_pathname = '$libdir/pg_base32'
+relocatable = false
+superuser = true
+schema = base32
