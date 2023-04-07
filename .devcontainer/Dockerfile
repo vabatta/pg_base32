@@ -6,7 +6,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get autoremove -y && apt-get clean -y
 
 # Install Commitizen for commit utilities
-RUN pip3 install -U Commitizen
+RUN pip3 install -U commitizen pre-commit
 
 # Non-root user (required for PGX to spin up PG servers)
 USER vscode
