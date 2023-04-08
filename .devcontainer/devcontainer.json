@@ -7,7 +7,10 @@
 		"dockerfile": "Dockerfile"
 	},
 	"remoteUser": "vscode",
-	"containerUser": "vscode"
+	"containerUser": "vscode",
+	"postCreateCommand": {
+		"pre-commit": "pre-commit install --hook-type commit-msg --hook-type pre-push"
+	}
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
 	// 	{
