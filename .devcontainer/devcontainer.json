@@ -1,30 +1,16 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/rust
 {
-	"name": "pg_base32",
+	"name": "Rust with PGX",
 	"build": {
-		// Path is relataive to the devcontainer.json file.
 		"dockerfile": "Dockerfile"
 	},
 	"remoteUser": "vscode",
 	"containerUser": "vscode",
+	"features": {
+		"ghcr.io/vabatta/devcontainer-features/commitizen:1": {}
+	},
 	"postCreateCommand": {
 		"pre-commit": "pre-commit install --hook-type commit-msg --hook-type pre-push"
 	}
-	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
-	// "mounts": [
-	// 	{
-	// 		"source": "devcontainer-cargo-cache-${devcontainerId}",
-	// 		"target": "/usr/local/cargo",
-	// 		"type": "volume"
-	// 	}
-	// ]
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "rustc --version",
-	// Configure tool-specific properties.
-	// "customizations": {},
 }
